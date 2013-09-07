@@ -4,7 +4,7 @@
 set tabstop=4
 
 " Changes tabs to spaces
-" set expandtab
+set expandtab
 
 " How many columns the shift (>> and <<) will move
 set shiftwidth=4
