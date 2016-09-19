@@ -1,3 +1,37 @@
+" ========               VUNDLE                ========
+set shell=/bin/bash
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" vim markdown plugins
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+" All Plugins must be added before the following line
+call vundle#end()            " required
+
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
 " ========             INDENTATION             ========
 
 " Tells how many columns a tab counts. Will change the display of existing files.
@@ -60,6 +94,14 @@ set wildmode=list:full
 
 " ========             NAVIGATION              ========
 " mouse
-if has('mouse')
-	set mouse=a
-endif
+" if has('mouse')
+" 	set mouse=a
+" endif
+
+" =======           MARKDOWN PLUGIN            ========
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_frontmatter = 1
+
+" =======             AIRLINE                  ========
+set laststatus=2
+let g:airline_theme = 'bubblegum'
